@@ -32,7 +32,7 @@
 - 输入：**3D skeleton / keypoints（单流）**
 - 模型：**ST-GCN++（及相关变体）**
 - 指标：**Top-1 Accuracy**
-- 最佳结果：**91.64%**
+- 最佳结果：**90.22%**(Joint) **90.33%**(Bone) **91.64%**(Joint+Bone)
 
 > 注：不同数据划分、预处理细节、训练策略都会显著影响最终精度。本项目的目标是在“更低复杂度”前提下拿到强基线。
 
@@ -42,11 +42,11 @@
 
 项目使用 NPZ 管线时，常见字段如下（按样本存储为 object 数组，每个样本是一个可变长序列）：
 
-- `data[idx]`：`(F, P, V, 3)`  
+- `data[idx]`：`(F, P, V, F)`  
   - `F`：帧数  
   - `P`：人数（常用 1 或 2）  
-  - `V`：关节点数（如 NTU 25 joints）  
-  - `3`：`(x, y, z)`  
+  - `V`：关节点数（如 NTU 25 joints, COCO-pose 17 joints）  
+  - `F`：`(x, y, z)`  也可以 `(xc, yc, conf_kpt)` `(xc, yc, conf_kpt, x, y, w, h, conf_bbox)` 等
 - `label[idx]`：类别 ID
 - `view[idx]`（可选）：视角 ID
 - `valid_frame[idx]`（可选）：有效帧数
