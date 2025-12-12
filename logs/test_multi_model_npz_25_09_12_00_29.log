@@ -1,0 +1,42 @@
+2025-09-12 00:29:33 | INFO | ================================================================================
+2025-09-12 00:29:33 | INFO | Logging to: G:\datasets\cls_video\PosePointNet\pyskl_gcn\logs\test_multi_model_npz_25_09_12_00_29.log
+2025-09-12 00:29:33 | INFO | ================================================================================
+2025-09-12 00:29:33 | INFO | Config:
+2025-09-12 00:29:33 | INFO |   AMP: True
+2025-09-12 00:29:33 | INFO |   BATCH_1CLIP: 16
+2025-09-12 00:29:33 | INFO |   BATCH_NCLIP: 8
+2025-09-12 00:29:33 | INFO |   CLIP_FUSE: prob
+2025-09-12 00:29:33 | INFO |   GPU_ID: 0
+2025-09-12 00:29:33 | INFO |   MODELS: [{'name': 'joint', 'streams': ('j',), 'ckpt': 'best_model/best_stgcn_ntu60_ms_cs_j_base_250906_01_90.15.pt', 'w': 1.0}, {'name': 'bone', 'streams': ('b',), 'ckpt': 'best_model/best_stgcn_ntu60_ms_b_250901_90.19.pt', 'w': 1.0}]
+2025-09-12 00:29:33 | INFO |   MODEL_FUSE: logits
+2025-09-12 00:29:33 | INFO |   NPZ_PATH: ['G:/datasets/cls_video/nturgbd_skeletons_s001_to_s017/pkl_mmaction/npz_raw_xyz_ntu60/ntu60_cs_test_xyz_raw.npz']
+2025-09-12 00:29:33 | INFO |   NUM_CLASSES: 60
+2025-09-12 00:29:33 | INFO |   NUM_CLIPS: 10
+2025-09-12 00:29:33 | INFO |   NUM_WORKERS: 4
+2025-09-12 00:29:33 | INFO |   SAVE_SCORES_DIR: 
+2025-09-12 00:29:33 | INFO |   SEED: 42
+2025-09-12 00:29:33 | INFO |   T: 64
+2025-09-12 00:29:33 | INFO |   USE_CONTIG_WINDOW: False
+2025-09-12 00:29:33 | INFO | --------------------------------------------------------------------------------
+2025-09-12 00:29:33 | INFO | Python: 3.8.19 | packaged by conda-forge | (default, Mar 20 2024, 12:38:07) [MSC v.1929 64 bit (AMD64)]
+2025-09-12 00:29:33 | INFO | OS: Windows 10 | CPU: Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+2025-09-12 00:29:33 | INFO | PyTorch: 1.13.1+cu116
+2025-09-12 00:29:33 | INFO | CUDA available: True | GPUs: 1
+2025-09-12 00:29:33 | INFO | CUDA (build): 11.6
+2025-09-12 00:29:33 | INFO | cuDNN: 8302
+2025-09-12 00:29:33 | INFO | CUDA device idx: 0 | name: NVIDIA GeForce RTX 3060 Laptop GPU | capability: (8, 6)
+2025-09-12 00:29:33 | INFO | TF32 matmul allowed: True
+2025-09-12 00:29:33 | INFO | CUDNN benchmark: True | deterministic: False
+2025-09-12 00:29:33 | INFO | ================================================================================
+2025-09-12 00:29:33 | INFO | ==========================================================================================
+2025-09-12 00:29:33 | INFO | [NPZ] ntu60_cs_test_xyz_raw.npz
+2025-09-12 00:29:33 | INFO | [Load] ema_state_dict | epoch=197 | val_top1=90.15% | val_top5=98.54%
+2025-09-12 00:30:15 | INFO | [ joint | 1-clip] Top1=90.15%  Top5=98.54% | N=16487 | t=38.1s
+2025-09-12 00:35:30 | INFO | [ joint | 10-clip/prob] Top1=90.22%  Top5=98.56% | N=16487 | t=311.1s
+2025-09-12 00:35:30 | INFO | [Load] ema_state_dict | epoch=103 | val_top1=90.19% | val_top5=98.49%
+2025-09-12 00:36:21 | INFO | [  bone | 1-clip] Top1=90.19%  Top5=98.49% | N=16487 | t=46.5s
+2025-09-12 00:43:34 | INFO | [  bone | 10-clip/prob] Top1=90.33%  Top5=98.53% | N=16487 | t=429.4s
+2025-09-12 00:43:34 | INFO | [FUSION | 1-clip | logits] Top1=91.48%  Top5=98.76%
+2025-09-12 00:43:34 | INFO | [FUSION | 10-clip/prob | logits] Top1=91.64%  Top5=98.77%
+2025-09-12 00:43:34 | INFO | ==========================================================================================
+2025-09-12 00:43:34 | INFO | ✅ Done.

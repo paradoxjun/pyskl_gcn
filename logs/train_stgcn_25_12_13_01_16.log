@@ -1,0 +1,42 @@
+2025-12-13 01:16:58 | INFO | ================================================================================
+2025-12-13 01:16:58 | INFO | Logging to: G:\code_s\pyskl_gcn\logs\train_stgcn_25_12_13_01_16.log
+2025-12-13 01:16:58 | INFO | ================================================================================
+2025-12-13 01:16:58 | INFO | Config:
+2025-12-13 01:16:58 | INFO |   AMP: True
+2025-12-13 01:16:58 | INFO |   BATCH: 16
+2025-12-13 01:16:58 | INFO |   CKPT_PATH: best_stgcn_ntu60_ms_cs_j_base_250906_01.pt
+2025-12-13 01:16:58 | INFO |   EMA: {'enabled': True, 'start_epoch': 3, 'eval_use_ema': True, 'half_life_epoch': 0.25}
+2025-12-13 01:16:58 | INFO |   EPOCH: 240
+2025-12-13 01:16:58 | INFO |   GPU_ID: 0
+2025-12-13 01:16:58 | INFO |   NUM_CLASS: 60
+2025-12-13 01:16:58 | INFO |   NUM_WORKERS: 8
+2025-12-13 01:16:58 | INFO |   OPT: {'name': 'SGD', 'lr': 0.1, 'momentum': 0.9, 'weight_decay': 0.0005, 'nesterov': True}
+2025-12-13 01:16:58 | INFO |   PREFETCH: 4
+2025-12-13 01:16:58 | INFO |   PRETRAINED: 
+2025-12-13 01:16:58 | INFO |   PRINT_FREQ: 0
+2025-12-13 01:16:58 | INFO |   SCHED: {'type': 'cosine', 'by': 'step', 'min_lr': 0.01, 'warmup_epochs': 3}
+2025-12-13 01:16:58 | INFO |   SEED: 42
+2025-12-13 01:16:58 | INFO |   STREAMS: ('j',)
+2025-12-13 01:16:58 | INFO |   T: 64
+2025-12-13 01:16:58 | INFO |   TRAIN_NPZ: G:/datasets/cls_video/nturgbd_skeletons_s001_to_s017/pkl_mmaction/npz_raw_xyz_ntu60/ntu60_cs_train_xyz_raw.npz
+2025-12-13 01:16:58 | INFO |   VAL_NPZ: G:/datasets/cls_video/nturgbd_skeletons_s001_to_s017/pkl_mmaction/npz_raw_xyz_ntu60/ntu60_cs_test_xyz_raw.npz
+2025-12-13 01:16:58 | INFO | --------------------------------------------------------------------------------
+2025-12-13 01:16:58 | INFO | Python: 3.8.19 | packaged by conda-forge | (default, Mar 20 2024, 12:38:07) [MSC v.1929 64 bit (AMD64)]
+2025-12-13 01:16:58 | INFO | OS: Windows 10 | CPU: Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+2025-12-13 01:16:58 | INFO | PyTorch: 1.13.1+cu116
+2025-12-13 01:16:58 | INFO | CUDA available: True | GPUs: 1
+2025-12-13 01:16:58 | INFO | CUDA (build): 11.6
+2025-12-13 01:16:58 | INFO | cuDNN: 8302
+2025-12-13 01:16:58 | INFO | CUDA device idx: 0 | name: NVIDIA GeForce RTX 3060 Laptop GPU | capability: (8, 6)
+2025-12-13 01:16:58 | INFO | TF32 matmul allowed: False
+2025-12-13 01:16:58 | INFO | CUDNN benchmark: False | deterministic: False
+2025-12-13 01:16:58 | INFO | ================================================================================
+2025-12-13 01:17:05 | INFO | Train | NPZ: G:/datasets/cls_video/nturgbd_skeletons_s001_to_s017/pkl_mmaction/npz_raw_xyz_ntu60/ntu60_cs_train_xyz_raw.npz
+2025-12-13 01:17:05 | INFO | Train | Total: 40091 | Batch: 16 | Workers: 8
+2025-12-13 01:17:08 | INFO | Val   | NPZ: G:/datasets/cls_video/nturgbd_skeletons_s001_to_s017/pkl_mmaction/npz_raw_xyz_ntu60/ntu60_cs_test_xyz_raw.npz
+2025-12-13 01:17:08 | INFO | Val   | Total: 16487 | Batch: 16 | Workers: 8
+2025-12-13 01:17:08 | INFO | Streams: ('j',) -> in_channels = 3
+2025-12-13 01:17:13 | INFO | Model: STGCNClassifier | Params(all): 1,403,144 | GFLOPs(all/backbone): 1.7279 G / 1.7279 G
+2025-12-13 01:17:13 | INFO | EMA per-step decay = 0.998893  [half_life_epoch=0.25, steps/epoch=2506, k=626]
+2025-12-13 01:17:13 | INFO | --------------------------------------------------------------------------------
+2025-12-13 01:17:13 | INFO | [Epoch 01/240] | LR: 0.000013
